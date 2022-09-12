@@ -1,0 +1,56 @@
+# print('Time que mais marcou gol na Competição:' + vGroupByTeam.loc[ vGroupByTeam[ 'GOLS' ].max() ][ 'NM_TIME' ] )
+# print(vGroupByTeam.iloc[ vGroupByTeam[ 'GOLS' ].max() ] )
+#print( vGroupByTeam = vGroupByTeam[ 'GOLS' ].max() )
+
+# MED_GOLS
+# vDFAux1 = pd.DataFrame(DBI.groupby('NM_TIME')['TEMPO_JOGADO'].max().reset_index())
+# vDFAux2 = pd.DataFrame(DBI.groupby('NM_TIME')['JOGOS'].max().reset_index())
+#vDFAux3 = pd.DataFrame(vGroupByTeam.groupby('NM_TIME')['GOLS'].max().reset_index())
+#print( vGroupByTeam[ 'NM_TIME' ].iloc[ vGroupByTeam[ 'GOLS' ] == vGroupByTeam[ 'GOLS' ].max() ] )
+#print( vGroupByTeam.loc[ vGroupByTeam[ 'GOLS' ] == vGroupByTeam[ 'GOLS' ].max() ][ 'NM_TIME' ] )
+# vDFAux4 = pd.DataFrame(DBI.groupby('NM_TIME')['ASSIST'].sum().reset_index())
+# vDFAux5 = pd.DataFrame(DBI.groupby('NM_TIME')['DIST_PERC'].sum().reset_index())
+
+
+#print( vGroupByTeam.loc[ vGroupByTeam[ 'JOGOS' ] <= 6 ][ { 'NM_TIME' } ].reset_index( drop = True ) )
+
+# vTabConcat_001 = vDF_001.merge(vDF_002, on='NM_TIME', how='outer').head()
+# vTabConcat_001['MED_GOLS'] = round( vTabConcat_001['GOLS'] / vTabConcat_001['JOGOS'], 2 )
+# vMedGolsByTeam = pd.DataFrame(vTabConcat_001, columns={'NM_TIME', 'MED_GOLS'}).sort_values('MED_GOLS', ascending=False)
+
+# MED_ASSIST
+
+# vDF_004 = pd.DataFrame(DBI.groupby('NM_TIME')['JOGOS'].max().reset_index())
+# vTabConcat_002 = vDF_003.merge(vDF_004, on='NM_TIME', how='outer').head()
+# vTabConcat_002['MED_ASSIST'] = round( vTabConcat_002['ASSIST'] / vTabConcat_002['JOGOS'], 2 )
+# vMedAssistByTeam = pd.DataFrame(vTabConcat_002, columns={'NM_TIME', 'MED_ASSIST'}).sort_values('MED_ASSIST', ascending=False)
+
+# vMedAssistByTeam = pd.DataFrame(DBI.groupby('NM_TIME')['MED_ASSIST'].sum().sort_values(ascending=False).reset_index().head())
+
+# vAssistsByPlayer = pd.DataFrame(DBI.groupby(['player_name', 'club'])['assists'].sum().sort_values(ascending=False).reset_index().head())
+# vAssistsByPosition = pd.DataFrame(DBI.groupby(['position'])['assists'].sum().sort_values(ascending=False).reset_index().head())
+
+# DB2
+# vGoalsByTeam = pd.DataFrame(DB2.groupby('club')['goals'].sum().sort_values(ascending=False).reset_index().head())
+# vGoalsByPlayer = pd.DataFrame(DB2.groupby(['player_name', 'club'])['goals'].sum().sort_values(ascending=False).reset_index().head())
+# vGoalsByPosition = pd.DataFrame(DB2.groupby(['position'])['goals'].sum().sort_values(ascending=False).reset_index().head())
+# vAvgGoals = pd.DataFrame(DB2.groupby(['player_name'])['goal/match'].max().sort_values(ascending=False).reset_index().head())
+
+# =======================================================================================================================================================
+# Análises & Gráficos
+# =======================================================================================================================================================
+    # Assistências
+# fig1, axs = plt.subplots(nrows=3,ncols=1, figsize=(10,5))
+# fig1.suptitle('Assistências - UCL 21/22', size=21)
+
+# axs[0].bar(vAssistsByTeam['club'], vAssistsByTeam['assists'], color='black')
+# axs[0].set_title('Clube', size=10)
+
+# axs[1].plot(vAssistsByPlayer['player_name'], vAssistsByPlayer['assists'], color='black')
+# axs[1].set_title('Jogador', size=10)
+
+# axs[2].bar(vAssistsByPosition['position'], vAssistsByPosition['assists'], color='black')
+# axs[2].set_title('Posição', size=10)
+
+# plt.tight_layout()
+# plt.show()
