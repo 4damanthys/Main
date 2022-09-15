@@ -229,19 +229,19 @@ vGroupByCountry[ 'MED_DIST_PERC' ] = round( vGroupByCountry[ 'DIST_PERC' ] / vGr
 #   Dataframes auxiliares:
 # =======================================================================================================================================================
 
-vGoalsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'GOLS' } ).sort_values( by = [ 'GOLS', 'PAIS' ], ascending=[ False, True ] ) \
-    .reset_index( drop = True )
-vAssistsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'ASSIST' } ).sort_values( by = [ 'ASSIST', 'PAIS' ], ascending=[ False, True\
+vGoalsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'GOLS' } ).sort_values( by = [ 'GOLS', 'PAIS' ], ascending = [ False, True ] 
+    ).reset_index( drop = True )
+vAssistsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'ASSIST' } ).sort_values( by = [ 'ASSIST', 'PAIS' ], ascending = [ False, True
       ] ).reset_index( drop = True )
-vAvgGoalsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_GOLS' } ).sort_values( by = [ 'MED_GOLS', 'PAIS' ], ascending=[ False,\
-     True ] ).reset_index( drop = True )
-vAvgAssistsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_ASSIST' } ).sort_values( by = [ 'MED_ASSIST', 'PAIS' ], ascending=[ \
+vAvgGoalsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_GOLS' } ).sort_values( by = [ 'MED_GOLS', 'PAIS' ], ascending = [ False
+    , True ] ).reset_index( drop = True )
+vAvgAssistsByCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_ASSIST' } ).sort_values( by = [ 'MED_ASSIST', 'PAIS' ], ascending = [ 
     False, True ] ).reset_index( drop = True )
-vDistPercbyContry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'DIST_PERC' } ).sort_values( by = [ 'DIST_PERC', 'PAIS' ], ascending=[ \
+vDistPercbyContry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'DIST_PERC' } ).sort_values( by = [ 'DIST_PERC', 'PAIS' ], ascending = [ 
     False, True ] ).reset_index( drop = True )
-vAvgDistPercbyCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_DIST_PERC' } ).sort_values( by = [ 'MED_DIST_PERC', 'PAIS' ], ascending=[\
-    False, True ] ).reset_index( drop = True )
-vMinToGoalbyCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MIN_P_GOL' } ).sort_values( by = [ 'MIN_P_GOL', 'PAIS' ], ascending=[\
+vAvgDistPercbyCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MED_DIST_PERC' } ).sort_values( by = [ 'MED_DIST_PERC', 'PAIS' ],
+    ascending=[ False, True ] ).reset_index( drop = True )
+vMinToGoalbyCountry = vGroupByCountry.filter( items = { 'PAIS', 'SIGLA_PAIS', 'MIN_P_GOL' } ).sort_values( by = [ 'MIN_P_GOL', 'PAIS' ], ascending = [
     True, True ] ).reset_index( drop = True )
 
 # =======================================================================================================================================================
@@ -270,19 +270,19 @@ vGroupByTeam[ 'MED_DIST_PERC' ] = round( vGroupByTeam[ 'DIST_PERC' ] / vGroupByT
 #   Dataframes auxiliares:
 # =======================================================================================================================================================
 
-vGoalsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'GOLS' } ).sort_values( by = [ 'GOLS', 'NM_REAL' ], ascending=[ False, True ] ) \
-    .reset_index( drop = True )
-vAssistsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'ASSIST' } ).sort_values( by = [ 'ASSIST', 'NM_REAL' ], ascending=[ False, True\
+vGoalsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'GOLS' } ).sort_values( by = [ 'GOLS', 'NM_REAL' ], ascending = [ False, True ] 
+    ).reset_index( drop = True )
+vAssistsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'ASSIST' } ).sort_values( by = [ 'ASSIST', 'NM_REAL' ], ascending = [ False, True
       ] ).reset_index( drop = True )
-vAvgGoalsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_GOLS' } ).sort_values( by = [ 'MED_GOLS', 'NM_REAL' ], ascending=[ False,\
+vAvgGoalsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_GOLS' } ).sort_values( by = [ 'MED_GOLS', 'NM_REAL' ], ascending = [ False,
      True ] ).reset_index( drop = True )
-vAvgAssistsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_ASSIST' } ).sort_values( by = [ 'MED_ASSIST', 'NM_REAL' ], ascending=[ \
+vAvgAssistsByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_ASSIST' } ).sort_values( by = [ 'MED_ASSIST', 'NM_REAL' ], ascending = [ 
     False, True ] ).reset_index( drop = True )
-vDistPercTotalByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'DIST_PERC' } ).sort_values( by = [ 'DIST_PERC', 'NM_REAL' ], ascending=[ \
+vDistPercTotalByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'DIST_PERC' } ).sort_values( by = [ 'DIST_PERC', 'NM_REAL' ], ascending = [ 
     False, True ] ).reset_index( drop = True )
-vAvgDistPercByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_DIST_PERC' } ).sort_values( by = [ 'MED_DIST_PERC', 'NM_REAL' ], ascending=[\
-    False, True ] ).reset_index( drop = True )
-vMinToGoalByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MIN_P_GOL' } ).sort_values( by = [ 'MIN_P_GOL', 'NM_REAL' ], ascending=[\
+vAvgDistPercByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MED_DIST_PERC' } ).sort_values( by = [ 'MED_DIST_PERC', 'NM_REAL' ], 
+    ascending=[ False, True ] ).reset_index( drop = True )
+vMinToGoalByTeam = vGroupByTeam.filter( items = { 'NM_REAL', 'SIGLA_PAIS', 'MIN_P_GOL' } ).sort_values( by = [ 'MIN_P_GOL', 'NM_REAL' ], ascending = [
     True, True ] ).reset_index( drop = True )
 # =======================================================================================================================================================
 # Criação de dataframes e inclusão de colunas para as análises na visão por 'JOGADOR':
