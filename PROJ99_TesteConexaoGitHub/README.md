@@ -3,6 +3,7 @@
 Este é um teste de conexão automático ao diretório 'main' no GitHub .
 
 - Teste 02
+- Teste 03 ;
 
 ## Informações básicas:
 Desenvolvido por: \
