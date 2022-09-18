@@ -2,6 +2,8 @@
 
 Este é um teste de conexão automático ao diretório 'main' no GitHub .
 
+- Teste 02
+
 ## Informações básicas:
 Desenvolvido por: \
 Data de Criação: 18/09/2022 ; \
